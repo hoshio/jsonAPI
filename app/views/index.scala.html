@@ -1,7 +1,12 @@
+@import helper._
 @(message: String)
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+    <h1>upload Here</h1>
+    @form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+        <input type="file" name="picture">
+        <p><input type="submit"></p>
+    }
 
 }
